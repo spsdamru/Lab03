@@ -1,0 +1,193 @@
+/* included css starts here */
+
+:root {
+    --color-block-1: #7B93DB;
+    --color-block-2: #4C63B6;
+    --color-block-3: #2D3A8C;
+    --color-block-4: #EF4E4E;
+
+    --color-text-light: #F5F7FA;
+    --color-text-dark: #3E4C59;
+
+    --color-back: #F5F7FA;
+}
+html { box-sizing: border-box; }
+*, *:before, *:after {box-sizing: inherit;}  
+body, div, span, h1, h2, h3, h4, aside, p, main, nav, ul, li {
+   margin: 0;
+   padding: 0;
+   list-style: none;
+}
+
+body {
+    font-family: 'Roboto Condensed', sans-serif;
+    font-weight: 300;
+    font-size: 1em;
+    color: var(--color-text-dark);
+    background-color: var(--color-back);
+}
+h2, h3, h4 { 
+    font-weight: 300;
+}
+.container {
+    display: grid;
+    grid-template-columns: repeat(10, 1fr);
+    grid-template-rows: 175px 75px 175px 275px auto;
+    gap: 25px;
+	padding: 25px;
+    width: 100%;
+}
+
+.container > div {
+    color: rgb(255, 255, 255);
+    border: 0;
+    border-radius: 3px;
+	box-shadow: 2px 2px 2px 2px hsla(0,0%,75%,0.2);
+}
+
+/* included css ends here */
+
+/* add your styles */
+#a, #b, #c, #d {
+    grid-column: span 2;
+}
+
+#g {
+    grid-column: span 2;
+    grid-row: 2 / span 2;
+}
+
+#h {
+    grid-column: span 4;
+    grid-row: 2 / span 2;
+}
+
+#i, #j {
+    grid-column: span 1;
+    grid-row: 2 / span 1;
+}
+
+#k {
+    grid-column: span 2;
+    grid-row: 2 / span 1;
+}
+
+#l, #m {
+    grid-column: span 2;
+    grid-row: 3 / span 1;
+}
+
+#n, #o, #p {
+    grid-column: span 2;
+    grid-row: 4 / span 1;
+}
+
+#q {
+    grid-column: span 4;
+    display: flex;
+}
+
+#a, #g, #n, #q {
+    background-color: white;
+    color: black;
+}
+
+#b {background-image: url(images/b.jpg);}
+#c {background-image: url(images/c.jpg);}
+#e {background-image: url(images/e.jpg);}
+#f {background-image: url(images/f.jpg);}
+#h {background-image: url(images/h.jpg);}
+#l {background-image: url(images/l.jpg);}
+#m {background-image: url(images/m.jpg);}
+#o {background-image: url(images/o.jpg);}
+#p {background-image: url(images/p.jpg);}
+
+#d, #k {background-color: #18348c;}
+#i {background-color: #789cd4;}
+#j {background-color: #4064b4;}
+
+#b, #c, #e, #f, #h, #l, #m, #o, #p {
+    position: relative;
+}
+
+#b h3, #c h3, #e h3, #f h3, #h h1, 
+#l h3, #m h3, #o h3, #p h3 {
+    position: absolute;
+    bottom: 10px;
+    left: 10px;
+    padding: 10px;
+}
+
+div img {
+    width: 100%;
+    max-width: fit-content;
+}
+
+#q img {
+    max-width: fit-content;
+}
+
+h1, h3, p {
+    padding: 10px;
+}
+
+div {
+    background-size: cover;
+    background-position: center;
+    background-repeat: no-repeat;
+}
+
+.btn {
+    background: none;
+    color: white;
+    border: none;
+    display: flex;
+    margin: 0 auto;
+    padding: 0;
+}
+
+.btn-orange {
+    display: flex;
+    background-color: #EF4E4E;
+    color: white;
+    border: none;
+    padding: 10px 10px;
+    font-size: 16px;
+    border-radius: 5px;
+    cursor: pointer;
+    margin: 0 auto;
+}
+
+.btn-orange:hover {
+    background-color: orangered;
+}
+
+#d, #i, #j, #k {
+    align-items: center;
+    display: flex;
+    justify-content: center;
+} 
+
+/* For tablet */
+@media screen and (max-width: 1100px) and (min-width: 850px) {
+    body {
+        font-size: 0.8em;
+    }
+}
+
+/* For mobile */
+@media screen and (max-width: 850px) {
+    body {
+        font-size: 0.8em;
+    }
+    .container {
+        grid-template-columns: repeat(1, 1fr);
+        grid-template-rows: auto;
+    }
+
+    #a, #b, #c, #d, #e, #f, #g, #h, #i, #j, #k, #l, #m, #n, #o, #p, #q {
+        grid-column: span 1;
+        grid-row: auto;
+        min-height: 75px;
+    }
+}
