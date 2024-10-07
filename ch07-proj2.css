@@ -120,7 +120,6 @@ h2, h3, h4 {
 
 div img {
     width: 100%;
-    max-width: fit-content;
 }
 
 #q img {
@@ -189,5 +188,9 @@ div {
         grid-column: span 1;
         grid-row: auto;
         min-height: 75px;
+    }
+
+    #h {
+        order: -1;
     }
 }
